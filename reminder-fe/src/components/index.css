@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap');
+
+#cover {
+  font-family: 'Tangerine', cursive;
+  color: #333;
+  /* position: absolute;
+  top: 0;
+  left: 0; */
+  /* width: 100vw;
+  height: 100vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

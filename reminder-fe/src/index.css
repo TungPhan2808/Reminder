@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
+:root {
+   --strong-grey: #cfcdcd;
+   --light-grey: #f6f6f6;
+   --red: #ef7b7b;
+   --light-red: #ef7b7b4b;
+   --yellow: #fcf3ca;
+   --green: #74d1aa;
+   --light-green: #8ed7b93c;
+   --purple: #c5a7f4;
+   --light-purple: #cfb5fa37;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   font-family: 'Roboto', sans-serif;
+   font-size: 62.5%;
+   background-color: black;
+   overflow: hidden;
+}
+
+.container-login {
+   display: flex;
+   flex-direction: column;
+   padding-top: 70px;
+   place-items: center;
+   height: 100%;
+}
+
+.wrapper {
+   height: fit-content;
+   /*This part is important for centering*/
+   display: grid;
+   place-items: center;
+}
+
+.typing-demo {
+   width: 100%;
+   animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
+   white-space: nowrap;
+   overflow: hidden;
+   border-right: 3px solid;
+   font-family: monospace;
+   font-size: 4em;
+   color: white;
+}
+
+@keyframes typing {
+   from {
+      width: 0;
+   }
+}
+
+@keyframes blink {
+   50% {
+      border-color: transparent;
+   }
+}
+
+.arrow {
+   position: relative;
+   margin: 0 auto;
+   width: 100px;
+}
+
+.arrow .curve {
+   border: 2px solid white;
+   border-color: transparent transparent transparent white;
+   height: 360px;
+   width: 1200px;
+   border-radius: 230px 0 0 150px;
+}
+
+.arrow .point {
+   position: absolute;
+   left: 40px;
+   top: 315px;
+}
+
+.arrow .point:before,
+.arrow .point:after {
+   border: 1.5px solid white;
+   height: 25px;
+   content: '';
+   position: absolute;
+}
+
+.arrow .point:before {
+   top: -11px;
+   left: -11px;
+   transform: rotate(-74deg);
+   -webkit-transform: rotate(-74deg);
+   -moz-transform: rotate(-74deg);
+   -ms-transform: rotate(-74deg);
+}
+
+.arrow .point:after {
+   top: -20px;
+   left: 5px;
+   transform: rotate(12deg);
+   -webkit-transform: rotate(12deg);
+   -moz-transform: rotate(12deg);
+   -ms-transform: rotate(12deg);
+}
+
+.btn {
+   width: 180px;
+   height: 60px;
+   cursor: pointer;
+   background: transparent;
+   border: 1px solid white;
+   outline: none;
+   transition: 1s ease-in-out;
+   position: relative;
+}
+
+.btn svg {
+   position: absolute;
+   /* left: 679px;
+   top: 468px; */
+   top: 0;
+   right: 0;
+   fill: none;
+   stroke: #fff;
+   stroke-dasharray: 150 480;
+   stroke-dashoffset: 150;
+   transition: 1s ease-in-out;
+}
+
+.btn:hover {
+   transition: 1s ease-in-out;
+   background: rgba(255, 255, 255, 0.181);
+}
+
+.btn:hover svg {
+   stroke-dashoffset: -480;
+}
+
+.btn span {
+   color: white;
+   font-size: 18px;
+   font-weight: 100;
+}
